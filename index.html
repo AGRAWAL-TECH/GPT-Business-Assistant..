@@ -1,0 +1,222 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hustle Mode Activated...</title>
+    <link rel="icon" href="{% static 'images/image copy.png' %}" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="initialOverlay" role="alert" aria-live="assertive" aria-label="Loading GPT Business Assistant">
+        <div class="spinner" aria-hidden="true"></div>
+        Booting Up GPT Biz Bot... 💼✨
+Crunching numbers... Manifesting millions... Aligning the vibes...
+Stay put — the money-making magic is about to drop. 🚀💸
+    </div>
+
+    <nav role="navigation" aria-label="Primary Navigation">
+        <div class="nav-container">
+            <a href="#" class="navbar-brand" tabindex="0">GPT Business Assistant</a>
+            <button id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="https://agrawal-tech.github.io/agrawaltech/" class="nav-link" tabindex="0">Website (AGRAWAL-TECH) </a>
+                <div class="dropdown" tabindex="0">
+                    <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="dropdownToggle">
+                        AI Tools <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="dropdownToggle" id="dropdownMenu">
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Sales Management</a>
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Production</a>
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Financials</a>
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Quality Control</a>
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Marketing & Compliance</a>
+                        <a href="#" class="dropdown-item" role="menuitem" tabindex="-1">Collaboration & Feedback</a>
+                    </div>
+                </div>
+                <form id="searchForm" role="search" aria-label="Search AI tools" autocomplete="off" onsubmit="return false;">
+                    <input type="text" id="searchInput" placeholder="Search AI tools..." aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" aria-expanded="false" />
+                    <button type="button" id="micButton" aria-label="Voice Search" title="Voice Search">
+                        <i class="fas fa-microphone" aria-hidden="true"></i>
+                        <svg id="voiceWave" viewBox="0 0 20 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <rect x="0" y="2" width="2" height="2" fill="currentColor" />
+                            <rect x="4" y="1" width="2" height="4" fill="currentColor" />
+                            <rect x="8" y="0" width="2" height="6" fill="currentColor" />
+                            <rect x="12" y="1" width="2" height="4" fill="currentColor" />
+                            <rect x="16" y="2" width="2" height="2" fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button type="button" id="searchButton" aria-label="Search">Search</button>
+                    <div id="suggestions" role="listbox" aria-label="Search suggestions" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="features-section" id="mainContent" tabindex="-1" aria-label="Main content">
+        <h2 data-aos="fade-up" tabindex="0">AI-Powered Business Tools</h2>
+
+        <div id="tagFilters" aria-label="Filter features by tags" role="list">
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="AI">#AI</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Marketing">#Marketing</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Sales">#Sales</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Financials">#Financials</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Production">#Production</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Collaboration">#Collaboration</div>
+            <div class="tag-filter" role="listitem" tabindex="0" data-tag="Compliance">#Compliance</div>
+        </div>
+
+        <section aria-labelledby="salesManagementTitle" data-category="Sales Management" class="mb-10">
+            <h3 id="salesManagementTitle" data-aos="fade-right" tabindex="0">Sales Management</h3>
+            <div class="feature-grid" id="featureListSales">
+                <article class="feature-card" tabindex="0" data-feature="Sales Prediction" data-tags="AI,Sales" aria-label="Sales Prediction: AI-powered sales forecasting for better decision-making.">
+                    <h5 class="card-title">Sales Prediction</h5>
+                    <i class="fas fa-chart-line fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">AI-powered sales forecasting for better decision-making.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Dynamic Pricing" data-tags="AI,Sales,Marketing" aria-label="Dynamic Pricing: Automatically adjust prices based on market data.">
+                    <h5 class="card-title">Dynamic Pricing</h5>
+                    <i class="fas fa-dollar-sign fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Automatically adjust prices based on market data.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Dealer Communication" data-tags="Collaboration,Sales" aria-label="Dealer Communication: Efficient communication and collaboration with dealers.">
+                    <h5 class="card-title">Dealer Communication</h5>
+                    <i class="fas fa-comments fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Efficient communication and collaboration with dealers.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Sales Analytics" data-tags="AI,Sales,Financials" aria-label="Sales Analytics: Detailed sales performance insights and analytics.">
+                    <h5 class="card-title">Sales Analytics</h5>
+                    <i class="fas fa-chart-pie fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Detailed sales performance insights and analytics.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="productionOptimizationTitle" data-category="Production Optimization" class="mb-10">
+            <h3 id="productionOptimizationTitle" data-aos="fade-right" tabindex="0">Production Optimization</h3>
+            <div class="feature-grid" id="featureListProduction">
+                <article class="feature-card" tabindex="0" data-feature="Inventory Management" data-tags="AI,Production" aria-label="Inventory Management: AI-driven stock management for optimized inventory.">
+                    <h5 class="card-title">Inventory Management</h5>
+                    <i class="fas fa-boxes fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">AI-driven stock management for optimized inventory.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Supplier Tracking" data-tags="Production" aria-label="Supplier Tracking: Track supplier performance and deliveries in real-time.">
+                    <h5 class="card-title">Supplier Tracking</h5>
+                    <i class="fas fa-truck fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Track supplier performance and deliveries in real-time.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Quality Control" data-tags="AI,Production,Compliance" aria-label="Quality Control: AI solutions for quality assurance and control.">
+                    <h5 class="card-title">Quality Control</h5>
+                    <i class="fas fa-check-circle fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">AI solutions for quality assurance and control.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Production Scheduling" data-tags="AI,Production" aria-label="Production Scheduling: Optimize production schedules with AI analysis.">
+                    <h5 class="card-title">Production Scheduling</h5>
+                    <i class="fas fa-calendar-alt fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Optimize production schedules with AI analysis.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="financialManagementTitle" data-category="Financial Management" class="mb-10">
+            <h3 id="financialManagementTitle" data-aos="fade-right" tabindex="0">Financial Management</h3>
+            <div class="feature-grid" id="featureListFinancials">
+                <article class="feature-card" tabindex="0" data-feature="Expense Tracking" data-tags="AI,Financials" aria-label="Expense Tracking: AI tools to monitor and track business expenses.">
+                    <h5 class="card-title">Expense Tracking</h5>
+                    <i class="fas fa-money-bill-wave fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">AI tools to monitor and track business expenses.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Financial Forecasting" data-tags="AI,Financials" aria-label="Financial Forecasting: Accurate financial projections using AI insights.">
+                    <h5 class="card-title">Financial Forecasting</h5>
+                    <i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Accurate financial projections using AI insights.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Cash Flow Management" data-tags="AI,Financials" aria-label="Cash Flow Management: Manage cash flow effectively with AI analysis.">
+                    <h5 class="card-title">Cash Flow Management</h5>
+                    <i class="fas fa-hand-holding-usd fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Manage cash flow effectively with AI analysis.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Investment Tracking" data-tags="AI,Financials" aria-label="Investment Tracking: Monitor investment performance with AI tools.">
+                    <h5 class="card-title">Investment Tracking</h5>
+                    <i class="fas fa-chart-line fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Monitor investment performance with AI tools.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="marketingComplianceTitle" data-category="Marketing & Compliance" class="mb-10">
+            <h3 id="marketingComplianceTitle" data-aos="fade-right" tabindex="0">Marketing & Compliance</h3>
+            <div class="feature-grid" id="featureListMarketing">
+                <article class="feature-card" tabindex="0" data-feature="Market Analysis" data-tags="AI,Marketing" aria-label="Market Analysis: Gain insights into market trends and customer behavior.">
+                    <h5 class="card-title">Market Analysis</h5>
+                    <i class="fas fa-search fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Gain insights into market trends and customer behavior.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Campaign Management" data-tags="AI,Marketing" aria-label="Campaign Management: Manage marketing campaigns effectively using AI.">
+                    <h5 class="card-title">Campaign Management</h5>
+                    <i class="fas fa-bullhorn fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Manage marketing campaigns effectively using AI.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Customer Feedback" data-tags="Collaboration,Marketing" aria-label="Customer Feedback: Analyze customer feedback to improve services.">
+                    <h5 class="card-title">Customer Feedback</h5>
+                    <i class="fas fa-comments fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Analyze customer feedback to improve services.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Regulatory Compliance" data-tags="Compliance" aria-label="Regulatory Compliance: Ensure compliance with industry regulations.">
+                    <h5 class="card-title">Regulatory Compliance</h5>
+                    <i class="fas fa-shield-alt fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Ensure compliance with industry regulations.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="collaborationFeedbackTitle" data-category="Collaboration & Feedback" class="mb-10">
+            <h3 id="collaborationFeedbackTitle" data-aos="fade-right" tabindex="0">Collaboration & Feedback</h3>
+            <div class="feature-grid" id="featureListCollaboration">
+                <article class="feature-card" tabindex="0" data-feature="Team Collaboration Tools" data-tags="Collaboration" aria-label="Team Collaboration Tools: Facilitate team collaboration with AI-driven tools.">
+                    <h5 class="card-title">Team Collaboration Tools</h5>
+                    <i class="fas fa-users fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Facilitate team collaboration with AI-driven tools.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Feedback Collection" data-tags="Collaboration" aria-label="Feedback Collection: Collect and analyze feedback efficiently.">
+                    <h5 class="card-title">Feedback Collection</h5>
+                    <i class="fas fa-comments fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Collect and analyze feedback efficiently.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Performance Analytics" data-tags="AI,Collaboration,Financials" aria-label="Performance Analytics: Analyze team performance with AI insights.">
+                    <h5 class="card-title">Performance Analytics</h5>
+                    <i class="fas fa-chart-bar fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Analyze team performance with AI insights.</p>
+                </article>
+                <article class="feature-card" tabindex="0" data-feature="Project Management" data-tags="AI,Collaboration" aria-label="Project Management: Manage projects effectively using AI tools.">
+                    <h5 class="card-title">Project Management</h5>
+                    <i class="fas fa-tasks fa-3x" aria-hidden="true"></i>
+                    <p class="card-text">Manage projects effectively using AI tools.</p>
+                </article>
+            </div>
+        </section>
+
+        <div id="noResultsMessage" class="hidden" aria-live="polite" role="alert" tabindex="0">🙁 Nothing found!</div>
+
+        <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+    </main>
+
+    <footer>
+        <p>© GPT Business Assistant | <a href="#" tabindex="0">Privacy Policy</a> | <a href="#" tabindex="0">Terms of Service</a></p>
+    </footer>
+
+    <div id="scrollHint" aria-hidden="true">Scroll down to explore features ↓</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="scripts.js" type="module"></script>
+</body>
+
+</html>
